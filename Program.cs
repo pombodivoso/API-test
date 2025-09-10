@@ -9,6 +9,7 @@ using CuriTrip.UseCases.CreatePasseio;
 using CuriTrip.UseCases.EditPasseio;
 using CuriTrip.UseCases.Login;
 using CuriTrip.UseCases.SeePasseio;
+using CuriTrip.EndPoints;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,11 +41,18 @@ builder.Services.AddSingleton<IJWTService, JWTService>();
 builder.Services.AddAuthentication();
 builder.Services.AddAuthorization();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 var app = builder.Build();
+
+app.ConfigureAuthEndPoints();
+app.ConfigureCuriTripEndPoints();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapGet("/", () => "Hello World!");
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
