@@ -12,4 +12,7 @@ public record CreatePasseioPayload
     [MinLength(40)]
     [MaxLength(200)]
     public string Description { get; init; }
+
+    [Required]
+    public Guid UserId { get; init; }
 }

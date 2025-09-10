@@ -5,10 +5,7 @@ namespace CuriTrip.UseCases.Login;
 public record LoginPayload
 {
     [Required]
-    public string Username { get; init; }
-
-    [Required]
-    public string FullName { get; init; }
+    public string UserName { get; init; }
 
     [Required]
     [MinLength(6)]
