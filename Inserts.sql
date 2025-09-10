@@ -1,0 +1,6 @@
+INSERT INTO Points VALUES ("Senai-CIC")
+INSERT INTO Points VALUES ("Shopping Estação")
+INSERT INTO Points VALUES ("Shopping Palladium")
+INSERT INTO Points VALUES ("Museu Paranaense")
+INSERT INTO Points VALUES ("Museu do Egito")
+INSERT INTO Points VALUES ("Jardim Botânico")
