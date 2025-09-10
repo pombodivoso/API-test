@@ -7,7 +7,8 @@ public class CreatePasseioUseCase(CuriTripDbContext ctx)
     public async Task<Result<CreatePasseioResponse>> Do(CreatePasseioPayload payload)
     {
         var user = await ctx.Users.FindAsync(u => u.Id == payload.UserId);
-
+        //por que a flecha não funciona?
+        
         if (user == null)
             return Result<CreatePasseioResponse>.Fail("User Not Found");
 

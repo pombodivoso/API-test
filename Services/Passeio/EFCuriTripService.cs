@@ -4,9 +4,12 @@ namespace CuriTrip.Services;
 
 public class EFCuriTripService(CuriTripDbContext ctx) : ICuriTripService
 {
-    public Task<Passeio> CreatePasseio(string Name, string Description, Guid UserId)
+    public Task<Passeio> CreatePasseio(CreatePasseioPayload payload)
     {
         // var user = ctx.Users.FindAsync(u => u.Id == payload.UserId);
+
+        // if (user == null)
+        //     return "User Not Found";
 
         // var passeio = new Passeio
         // {
@@ -18,8 +21,9 @@ public class EFCuriTripService(CuriTripDbContext ctx) : ICuriTripService
 
         // ctx.Passeio.Add(passeio);
         // ctx.SaveChangesAsync();
-        // return passeio.Id;
+        // await return new(passeio);
         throw new NotImplementedException();
+        //os retornos não funcionam por nada
     }
 }
 

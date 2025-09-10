@@ -15,7 +15,8 @@ public class LoginUseCase(CuriTripDbContext ctx)
         var jwt = JWTService.CreateToken(new(
             user.Id, user.Name
         ));
-
+        //por que o JWT não está aceitando o tipo das minhas variáveis?
+        
         return Result<LoginReponse>.Sucess(new LoginReponse(jwt));
     }
 }

@@ -1,7 +1,8 @@
 using CuriTrip.Models;
 namespace CuriTrip.Services;
+using CuriTrip.UseCases.CreatePasseio;
 
 public interface ICuriTripService
 {
-    Task<Passeio> CreatePasseio(string Name, string Description, Guid UserId);
+    Task<Passeio> CreatePasseio(CreatePasseioPayload payload);
 }

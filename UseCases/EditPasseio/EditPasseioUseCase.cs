@@ -12,6 +12,7 @@ public class EditPasseioUseCase(CuriTripDbContext ctx)
             return Result<EditPasseioResponse>.Fail("Passeio Not Found");
 
         var point = await ctx.Points.FindAsync(p => p.Id == payload.PointId);
+        //por que AS flechas não funcionam?
 
         if (point == null)
             return Result<EditPasseioResponse>.Fail("Point Not Found");
